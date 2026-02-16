@@ -37,6 +37,10 @@
             </form>
 
             <!-- tutaj skrypt 1 -->
+             <?php 
+            $polaczenie = new mysqli("localhost", "root","","remonty");
+
+?>
 
         </section>
 
@@ -71,3 +75,6 @@
 </body>
 
 </html>
+<?php 
+$polaczenie->close();
+?>
