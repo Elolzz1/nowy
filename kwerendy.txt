@@ -1,0 +1,18 @@
+1.SELECT AVG(liczba_pracownikow) AS srednia, MIN(liczba_pracownikow) as najmniej, MAX(liczba_pracownikow) as najwiecej FROM wykonawcy
+
+2.SELECT nazwa_firmy, liczba_pracownikow FROM wykonawcy
+WHERE liczba_pracownikow >= 40
+
+3.
+SELECT DISTINCT miasto FROM klienci 
+GROUP BY miasto asc 
+4.
+SELECT imie,miasto ,cena,rodzaj FROM klienci
+JOIN zlecenia ON klienci.id_klienta=zlecenia.id_klienta
+WHERE miasto ='Poznań' AND rodzaj = 'Malowanie'
+
+5.
+SELECT imie, nazwa_firmy FROM klienci
+JOIN zlecenia ON klienci.id_klienta=zlecenia.id_klienta
+JOIN wykonawcy ON zlecenia.id_zlecenia=wykonawcy.id_wykonawcy
+
